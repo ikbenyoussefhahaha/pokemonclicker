@@ -8,7 +8,7 @@ window.PokemonClicker.bindButtons = function () {
     effect.style.left = `${event.clientX}px`;
     effect.style.top = `${event.clientY}px`;
     document.body.appendChild(effect);
-    setTimeout(() => effect.remove(), 850);
+    setTimeout(() => effect.remove(), 850
 
     this.updateScreen();
   });
@@ -26,4 +26,4 @@ window.PokemonClicker.bindButtons = function () {
   document.querySelector("#skinButton").addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
   });
-};
+}; 
