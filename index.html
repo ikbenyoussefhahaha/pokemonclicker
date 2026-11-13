@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokemon Clicker</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    
+
+<script src="javascript/game-data.js"></script>
+<script src="javascript/production.js"></script>
+<script src="javascript/shop.js"></script>
+<script src="javascript/upgrades.js"></script>
+<script src="javascript/game-ui.js"></script>
+<script src="javascript/clicks.js"></script>
+<script src="javascript/save.js"></script>
+<script src="javascript/events.js"></script>
+<script src="javascript/skins.js"></script>
+<script src="javascript/main.js"></script>
+</head>
+
+<body>
+
+
+    <header class="topbar">
+        <h1>Pokemon Clicker</h1>
+
+        <div class="header-buttons">
+            <button id="saveButton" class="small-button">
+                Opslaan
+            </button>
+
+            <button id="resetButton" class="small-button">
+                Opnieuw beginnen
+            </button>
+        </div>
+    </header>
+
+    <!-- Hoofdgedeelte van het spel -->
+    <main class="game-layout">
+
+        <!-- Linkerkant: Pokémon waarmee je klikt -->
+        <section class="click-area">
+
+            <h2>Pokemon Power</h2>
+
+            <p class="score">
+                <span id="points">0</span> punten
+            </p>
+
+            <p id="rate">
+                0 punten per seconde
+            </p>
+
+            <p id="clickPower">
+                1 punt per klik
+            </p>
+
+            <!-- Klikbare Pokémon -->
+            <button
+                id="pokemonButton"
+                class="pokemon-button"
+                aria-label="Klik op Pikachu om punten te verdienen"
+            >
+                <img
+                    id="images"
+                    src="images/pikachu.png"
+                    alt="Pikachu"
+                >
+            </button>
+
+            <h2 id="pokemonName">Pikachu</h2>
+
+            <p>
+                Klik op de Pokémon om punten te verdienen!
+            </p>
+
+            <!-- Eventgedeelte -->
+            <div id="eventArea" class="event-area">
+                Er is momenteel geen event actief.
+            </div>
+
+            <!-- Skin knop -->
+            <button id="skinButton" class="small-button">
+                Vrijgespeelde skin gebruiken
+            </button>
+
+        </section>
+
+
+        <!-- Rechterkant: Upgrades en verzameling -->
+        <section class="upgrade-area">
+
+            <h2>Upgrades</h2>
+
+            <p>Maak je Pokémon sterker!</p>
+
+            <div id="upgrades" class="shop-list">
+                <!-- Upgrades worden via JavaScript toegevoegd -->
+            </div>
+
+
+            <h2>Jouw verzameling</h2>
+
+            <div id="inventory">
+                <!-- Gekochte Pokémon worden hier getoond -->
+            </div>
+
+
+            <h2>Vrijgespeeld</h2>
+
+            <p id="unlocks">
+                Je avontuur begint nu!
+            </p>
+
+        </section>
+
+
+        <!-- Winkel: Pokémon kopen -->
+        <section class="shop-area">
+
+            <h2>Pokémonwinkel</h2>
+
+            <p>
+                Koop Pokémon die automatisch punten verdienen!
+            </p>
+
+            <div id="shop" class="shop-list">
+                <!-- Pokémon worden via JavaScript toegevoegd -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Onderaan de pagina -->
+    <footer>
+        <p>
+            Pokemon Clicker - Vang ze allemaal! - Youssef Meziane
+        </p>
+    </footer>
+
+</body>
+</html>

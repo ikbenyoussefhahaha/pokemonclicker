@@ -1,0 +1,276 @@
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        color:#24344d;
+        background:#fff8df;
+
+    }
+
+    .topbar{
+    background: #ffcb05;
+    border-bottom: 4px solid #3157a4;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    }
+
+    .topbar h1 {
+        margin: 0 auto 0 0;
+        color:#24458c;
+
+    }
+
+    .game-layout {
+        display: grid;
+        grid-template-columns: minmax(230px,1fr)
+                               minmax(260px,1.2fr)
+                               minmax(240px,1.2fr);
+                               
+        gap:18px;
+        padding:20px;
+        max-width: 1600px;
+        margin: auto;
+        align-items:start;
+    
+    }  
+
+    .click-area,
+    .shop-area,
+    .upgrade-area {
+        background: white;
+        border: 2px solid #d5deef;
+        border-radius:18px;
+        padding: 20px;
+        text-align:center;
+        box-shadow: 0 5px 12px #24344d12;
+    }
+
+    h2 {
+    color: #3157a4;
+}
+
+
+.score {
+    front-size: 27px;
+    font-weight: bold;
+    color: #b07800;
+    over-flow: anywhere;
+
+}    
+
+
+    
+
+.pokemon-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 300px;
+
+    margin: 20px auto;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    cursor: pointer;
+}
+
+
+.pokemon-button::before {
+    display: none;
+    content: none;
+}
+
+
+.pokemon-button img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    transition: transform 0.15s ease;
+}
+
+
+.pokemon-button:hover img {
+    transform: scale(1.08);
+}
+
+.pokemon-button:active img {
+    transform: scale(0.95);
+}
+
+    .pokemon-button.cliked{
+        transform:scale(0.92)
+
+    }
+
+    .small-button{
+        background: #3157a4;
+        color: white;
+        border: 0;
+        border-radius: 9px;
+        padding: 10px 13px;
+        cursor:pointer;
+        margin:3px
+
+
+    } 
+
+    .shop-list{
+        display: grid;
+        gap:10px;
+    }
+
+    .shop-item{
+        border: 1px solid #d5deef;
+        border-radius:12px;
+        padding:12px;
+        text-align:left;
+        background:#f8faff;
+    }
+
+    .shop-item h3{
+        margin: 0 0 6px;
+    }
+
+    .shop-item p {
+        margin: 5px 0;
+
+    }
+
+    .buy-button{
+        width: 100%;
+        padding:10px;
+        margin-top: 7px;
+        background:#3157a4;
+        color:white;
+        border:0;
+        border-radius: 8px;
+        cursor: pointer;
+
+    }
+
+    .buy-button:disabled{
+        background:#aab2c0;
+        cursor: not-allowed;
+    }
+
+    .event-area {
+        background:#fff4c4;
+        border: 1px dashed #d8a400;
+        border-radius: 10px;
+        padding: 12px;
+        margin: 15px 0;
+
+    }
+
+    #inventory{
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    .floating-point{
+        position: fixed;
+        pointer-events: none;
+        z-index: 10;
+        color:#b07800;
+        font-size:24px;
+        font-weight: bold;
+        font-size: 24px;
+        font-weight: bold;
+        animation:float-up 0.8s ease-out forwards;
+
+    }
+
+
+
+    @keyframes float-up {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+}
+
+.golden {
+    background: #fff0bd;
+    border-color: #e3a900;
+}
+
+body.dark-theme {
+    background: #202a40;
+    color: #f3f5ff;
+}
+
+body.dark-theme .click-area,
+body.dark-theme .shop-area,
+body.dark-theme .upgrade-area {
+    background: #303d58;
+    border-color: #65789d;
+    color: #f3f5ff;
+}
+
+body.dark-theme .shop-item {
+    background: #3b4a67;
+    border-color: #65789d;
+}
+
+body.dark-theme h2,
+body.dark-theme h3 {
+    color: #ffda65;
+}
+
+@media (max-width: 900px) {
+    .game-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .click-area {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-layout {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
+
+    .click-area {
+        grid-column: auto;
+    }
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
